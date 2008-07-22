@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.sf.fuge</groupId>
+        <artifactId>fuge-ejb3-stk</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>fuge-ejb3-stk-common</artifactId>
+    <packaging>jar</packaging>
+    <name>FuGE EJB 3.0 STK Common</name>
+    <dependencies>
+        <dependency>
+            <groupId>${pom.groupId}</groupId>
+            <artifactId>fuge-ejb3-stk-mda</artifactId>
+            <version>${pom.version}</version>
+            <type>pom</type>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.andromda.maven.plugins</groupId>
+                <artifactId>andromda-multi-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
